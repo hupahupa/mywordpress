@@ -1,0 +1,11 @@
+<VirtualHost *:80>
+
+    <% mywordpress = node[:mywordpress] -%>
+    <% server_names = mywordpress[:server_names] -%>
+    ServerName <%= server_names.first() %>
+    ServerAlias <%= server_names.join(' ') %>
+    DocumentRoot <%= mywordpress[:site_dir] %>
+    ErrorLog <%= mywordpress[:log_dir] %>/error.log
+    CustomLog <%= mywordpress[:log_dir] %>/access.log json
+
+</VirtualHost>

@@ -1,0 +1,11 @@
+/wp-config.php
+/wp-content/uploads
+/logs
+/*.sql
+/scripts
+*~
+.*.swp
+/.vagrant
+/apt-cache
+/.cache
+/*.tar.gz
